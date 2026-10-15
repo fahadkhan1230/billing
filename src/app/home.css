@@ -1,0 +1,484 @@
+
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+.home-page {
+  min-height: 100vh;
+  background: #edf2fa;
+  color: #10244a;
+  font-family: Arial, "Noto Sans Bengali", sans-serif;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+  min-height: 220px;
+  padding: 20px;
+  position: relative;
+  background:
+    radial-gradient(circle at 100% 0%, #42314c 0, transparent 25%),
+    linear-gradient(115deg, #0b1d45, #142a5c);
+  color: white;
+  border-bottom: 2px solid #ff6b24;
+}
+
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-box,
+.asset-logo {
+  height: 44px;
+  background: white;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.logo-box {
+  width: 47px;
+}
+
+.organization-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.asset-logo img {
+  width: 95px;
+  max-height: 35px;
+  object-fit: contain;
+}
+
+.header-title {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  text-align: right;
+  max-width: 55%;
+}
+
+.header-title h2 {
+  font-size: 17px;
+  margin: 0 0 7px;
+  font-weight: 800;
+}
+
+.header-title p {
+  font-size: 10px;
+  color: #d8e1f4;
+  margin: 0;
+}
+
+/* ================= POWERED BY ================= */
+
+/* Powered section: পুরো কার্ডকে মাঝখানে রাখবে */
+.powered-section {
+  width: fit-content;
+  max-width: 100%;
+  margin: 16px auto 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* কার্ডের উপরের হলুদ লাইন */
+.powered-line {
+  width: 85%;
+  max-width: 300px;
+  height: 2px;
+  background: #ffdb39;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+
+/* সম্পূর্ণ লেখা ও লোগোর ব্যাকগ্রাউন্ড */
+.powered-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  width: fit-content;
+  max-width: 100%;
+  min-height: 64px;
+
+  padding: 14px 20px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #06132d 0%,
+    #10254a 50%,
+    #020b20 100%
+  );
+
+  border: 1px solid rgba(255, 219, 57, 0.45);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+/* বিদ্যুৎ আইকন */
+.power-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+
+  background: #ff7417;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+/* Powered by লেখা */
+.powered-card > span:nth-child(2) {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* মাঝখানের ডিভাইডার */
+.powered-divider {
+  height: 28px;
+  border-left: 1px solid #8794ad;
+  flex-shrink: 0;
+}
+
+/* প্রতিষ্ঠানের নাম ও লোগো */
+.powered-name {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* IT লেখার রং */
+.powered-name span {
+  color: #ff701e;
+  font-size: 15px;
+}
+
+/* ছোট মোবাইল স্ক্রিন */
+@media (max-width: 420px) {
+  .powered-section {
+    padding: 0 8px;
+  }
+
+  .powered-card {
+    gap: 6px;
+    padding: 12px 10px;
+  }
+
+  .powered-card > span:nth-child(2) {
+    font-size: 11px;
+  }
+
+  .powered-name {
+    font-size: 14px;
+  }
+
+  .powered-name span {
+    font-size: 13px;
+  }
+}
+
+/* ================= NAVIGATION ================= */
+.navigation-bar {
+  min-height: 78px;
+  background: #0e2453;
+  color: white;
+  border-bottom: 2px solid #ff6b24;
+  padding: 8px 12px;
+}
+
+.navigation-top,
+.navigation-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.navigation-top {
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+.navigation-top p {
+  margin: 0;
+}
+
+.system-badge {
+  color: #ff7840;
+  border: 1px solid #ff6b24;
+  border-radius: 20px;
+  padding: 4px 11px;
+  white-space: nowrap;
+}
+
+.nav-button {
+  border: none;
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.white-button {
+  color: #12254c;
+  background: white;
+}
+
+.orange-button {
+  color: #17213c;
+  background: #ff711d;
+}
+
+/* ================= CONTENT ================= */
+.content-area {
+  width: 100%;
+  padding: 18px 12px 28px;
+}
+
+.billing-panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+  background: white;
+  border: 1px solid #d5dce6;
+  border-radius: 9px;
+  box-shadow: 0 4px 18px #182b4a0d;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.eyebrow {
+  display: block;
+  color: #657086;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.panel-heading h1 {
+  font-size: 14px;
+  border-left: 2px solid #ff6b24;
+  padding-left: 8px;
+  margin: 0 0 6px;
+}
+
+.panel-heading p {
+  color: #748096;
+  font-size: 9px;
+  margin: 0;
+}
+
+.protection-badge {
+  color: #008577;
+  background: #eaf8f5;
+  border: 1px solid #a8ded4;
+  border-radius: 20px;
+  padding: 6px 9px;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+/* ================= BILLING CARDS ================= */
+.billing-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.billing-card {
+  min-height: 56px;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+  background: white;
+  border: 1px solid #e1d7c4;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #10244a;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.billing-card:hover {
+  border-color: #008b72;
+}
+
+.billing-card.selected {
+  background: #f0f8f6;
+  border: 1.5px solid #00866e;
+}
+
+.number-circle {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #102650;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-text strong {
+  font-size: 10px;
+}
+
+.card-text small {
+  font-size: 8px;
+  line-height: 1.5;
+  color: #707a8c;
+}
+
+.billing-hint {
+  background: #f7f4ec;
+  border-radius: 7px;
+  padding: 9px;
+  margin-top: 8px;
+  color: #39425a;
+  font-size: 9px;
+}
+
+.billing-hint p {
+  margin: 0;
+}
+
+.panel-footer {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #737e91;
+  font-size: 10px;
+}
+
+.start-button {
+  background: #ff711d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 14px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.main-footer {
+  padding: 14px;
+  text-align: center;
+  color: #d7e0f2;
+  background: #0e2453;
+  font-size: 10px;
+}
+
+.main-footer p {
+  margin: 4px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 650px) {
+  .main-header {
+    min-height: 245px;
+    padding: 12px;
+  }
+
+  .header-title {
+    position: static;
+    max-width: 100%;
+    margin-top: 15px;
+    text-align: left;
+  }
+
+  .header-title h2 {
+    font-size: 14px;
+  }
+
+  .powered-section {
+    width: 270px;
+    margin-top: 12px;
+  }
+
+  .powered-card {
+    min-height: 75px;
+    padding: 12px;
+  }
+
+  .powered-name {
+    font-size: 16px;
+  }
+
+  .navigation-top {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .navigation-actions {
+    flex-wrap: wrap;
+  }
+
+  .billing-options {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-heading {
+    flex-direction: column;
+  }
+
+  .protection-badge {
+    align-self: flex-start;
+  }
+
+  .panel-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media print {
+  .navigation-bar,
+  .main-footer,
+  .start-button {
+    display: none;
+  }
+}

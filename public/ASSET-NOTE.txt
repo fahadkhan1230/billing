@@ -1,0 +1,1 @@
+Reference logo supplied by user. The starter UI uses a text-based logo treatment; replace this file with a transparent PNG/SVG logo for a cleaner production header.

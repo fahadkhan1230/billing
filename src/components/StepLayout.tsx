@@ -1,0 +1,6 @@
+"use client";
+import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+const names=["Billing Mode & Tranche","Training Type","Batch Count","STP Profile","People & Amounts","Invoice Details","Bank Details","Trainee List","Review & Export"];
+export default function StepLayout({step,title,children}:{step:number;title:string;children:React.ReactNode}){return <><SiteHeader/><main className="container"><div className="wizard-progress"><span>STEP {step} OF 9</span><strong>{title}</strong><div className="progress-track"><i style={{width:`${step/9*100}%`}}/></div><div className="step-links">{names.map((n,i)=><Link key={n} className={step===i+1?"active":""} href={`/billing/step-${i+1}`}>{i+1}. {n}</Link>)}</div></div><section className="panel step-panel">{children}<div className="step-navigation">{step>1?<Link className="nav-button" href={`/billing/step-${step-1}`}>← আগের ধাপ</Link>:<Link className="nav-button" href="/">⌂ Home</Link>}{step<9?<Link className="primary nav-button" href={`/billing/step-${step+1}`}>পরের ধাপ →</Link>:<Link className="primary nav-button" href="/billing/invoice">Final Invoice তৈরি করুন →</Link>}</div></section></main><SiteFooter/></>}

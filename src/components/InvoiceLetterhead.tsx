@@ -1,0 +1,2 @@
+import {ORG_LOGO,ORG_NAME} from "@/lib/branding";
+export default function InvoiceLetterhead(){return <div className="invoice-letterhead"><div className="invoice-logo-wrap"><img className="invoice-logo" src={ORG_LOGO} alt={`${ORG_NAME} logo`}/></div><div><h1>Informal Sector Industry Skills Council (ISISC)</h1><p><b>{ORG_NAME} · Training Provider</b></p><p>Registration No.: ISISC / ASSET EBT</p><p>Bangladesh · Training, Projects & Consultancy</p></div></div>}
